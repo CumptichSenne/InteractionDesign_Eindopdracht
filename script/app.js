@@ -2,7 +2,7 @@ const showMovies = function (jsonObject) {
   let htmlstring_movies = '';
   for (const movies of jsonObject.data) {
     console.log(movies.title);
-    htmlstring_movies += `<div class="grid-item">${movies.title}</div>`;
+    htmlstring_movies += `<div class="grid-item"><img src="${movies.cover_url}" width="300"></br>${movies.title}</div>`;
   }
   document.querySelector('.js-movies').innerHTML = htmlstring_movies;
 };

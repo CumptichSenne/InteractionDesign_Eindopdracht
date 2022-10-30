@@ -8,7 +8,7 @@
 
 :root {
     /* colors */
-    --color-front: #171616;
+    --color-front: black;
     --color-back: #611813;
 
     /* opacity */
@@ -253,7 +253,7 @@ input::placeholder {
 */
 
 .c-logo {
-    font-size: 16px;
+    font-size: 32px;
     line-height: 16px;
     font-weight: 400;
     display: flex;
@@ -268,14 +268,11 @@ input::placeholder {
     The sun
 */
 
-.c-sun {
+.c-svg {
     fill: var(--color-front);
-    height: 38px;
-    width: 38px;
+    height: 46px;
+    width: 46px;
 
-}
-
-.c-logo .c-sun {
 }
 
 /*
@@ -285,9 +282,9 @@ input::placeholder {
 */
 
 .c-app{
-    max-width: 25rem;
+
     min-height: 100vh;
-    padding: 2rem 2rem 0.5rem;
+    padding: 2rem 3rem 2rem 2rem;
 }
 
 .c-app__summary{
@@ -295,71 +292,23 @@ input::placeholder {
     line-height: 40px;
 }
 
-/*
-    Component: Horizon
-    ---
-    Horizon with sun visualisation
-*/
-
-.c-horizon__line{
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid var(--color-front);
-    padding-top: 0.5rem;
-}
-
-.c-horizon__time{
-    font-size: 0.75rem;
-    line-height: 0.875rem;
-}
-
-.c-horizon__sky-wrapper {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-    padding-top: 1.375rem;
-    padding-right: 2.5rem;
-}
-
-.c-horizon__sky {
-    position: relative;
-    height: 100%;
-}
-
-.c-horizon__sun {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    transform: translateY(1.375rem);
-}
-
-.c-horizon__sun::before{
-    content: attr(data-time);
-    font-size: 0.75rem;
-    line-height: 0.875rem;
-    display: block;
-    text-align: center;
-}
 
 .grid-container {
     display: grid;
     gap: 50px;
-    grid-template-columns: auto auto auto;
-    background-color: #2196F3;
+    grid-template-columns: auto auto auto auto;
     padding: 10px;
-    width: 100vw;
-    height: 100vh;
+    width: 95vw;
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
+    padding: 10px;
+    font-size: 24px;
     text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 /*------------------------------------*\
 #UTILITIES
@@ -369,10 +318,6 @@ input::placeholder {
     Utilities: Mute
     Mute with opacity
 */
-
-.u-muted{
-    opacity: 0.6;
-}
 
 /*------------------------------------*\
 #STATES
@@ -456,6 +401,6 @@ input::placeholder {
 }
 
 .is-night {
-    --color-front: #0d9cd4;
-    --color-back: white;
+    --color-front: black;
+    --color-back: #611813;
 }
