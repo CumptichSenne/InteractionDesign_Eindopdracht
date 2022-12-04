@@ -361,12 +361,32 @@ input::placeholder {
 }
 
 .popup .close:hover {
-    color: #06D85F;
+    color: red;
 }
 
 .popup .content {
     max-height: 30%;
     overflow: auto;
+}
+
+.c-loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media(max-width: 1200px){
