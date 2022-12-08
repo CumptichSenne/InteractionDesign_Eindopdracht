@@ -1,7 +1,7 @@
 const showMovies = function (jsonObject) {
   let htmlstring_movies = '';
   for (const movies of jsonObject.data) {
-    htmlstring_movies += `<a class="button" href="#popup1"><div class="grid-item js-movie" type="button" href="#popup1" movie_id=${movies.id}><img src="${movies.cover_url}" class="c-image"></br>${movies.title}</div></a>`;
+    htmlstring_movies += `<a class="button" href="#popup1"><div class="grid-item js-movie" type="button" href="#popup1" movie_id=${movies.id}><img src="${movies.cover_url}" class="c-image"></br><div class="c-movie-title">${movies.title}</div></div></a>`;
   }
   document.querySelector('.js-movies').innerHTML = htmlstring_movies;
   listenToMovies();
@@ -10,13 +10,13 @@ const showMovies = function (jsonObject) {
 const showMovie = function (jsonObject) {
   let htmlstring_movie = '';
   htmlstring_movie += `<div class="popup">
-                <h2>${jsonObject.title}</h2>
+                <div class="c-title">${jsonObject.title}</div>
                 <a class="close" href="#">&times;</a>
                 <div class="content">
-                    <h5>
+                    <div class="c-info">
                       Release date: ${jsonObject.release_date}</br>
                       Director: ${jsonObject.directed_by}
-                    </h5>
+                    </div>
                     <div class="o-layout">
                       <div class="o-layout__item u-1-of-3">
                         <img src="${jsonObject.cover_url}" class="c-image">
@@ -41,8 +41,8 @@ const ShowGrafiek = function (jsonObject) {
     ],
     chart: {
       type: 'bar',
-      height: '400px',
-      width: '800px',
+      height: '350px',
+      width: '700px',
       toolbar: {
         show: false,
       },
@@ -113,7 +113,7 @@ const ShowGrafiek = function (jsonObject) {
       {
         breakpoint: 500,
         options: {
-          chart: { height: '200px', width: '200px' },
+          chart: { height: '150px', width: '200px' },
         },
       },
     ],
