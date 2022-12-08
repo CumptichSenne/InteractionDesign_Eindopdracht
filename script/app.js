@@ -30,61 +30,96 @@ const showMovie = function (jsonObject) {
   ShowGrafiek(jsonObject);
 };
 
-const ShowGrafiek = function(jsonObject){
-console.log(jsonObject.box_office);
-    let Bar1 = {
-      series: [
-        {
-          name: 'Money made (in $)',
-          data: [(jsonObject.box_office/1000000).toFixed(2)],
-        },
-      ],
-      chart: {
-        type: 'bar',
-        height: 350,
-        width: 700
+const ShowGrafiek = function (jsonObject) {
+  console.log(jsonObject.box_office);
+  let Bar1 = {
+    series: [
+      {
+        name: 'Money made (in $)',
+        data: [(jsonObject.box_office / 1000000).toFixed(2)],
       },
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          columnWidth: '25%',
-          endingShape: 'rounded',
-        },
+    ],
+    chart: {
+      type: 'bar',
+      height: '400px',
+      width: '800px',
+      toolbar: {
+        show: false,
       },
-      dataLabels: {
-        enabled: false,
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: '25%',
+        endingShape: 'rounded',
       },
-      stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent'],
-      },
-      xaxis: {
-        categories: [
-          jsonObject.title,
-        ],
-      },
-      yaxis: {
-        title: {
-          text: '$ (million)',
-        },
-      },
-      fill: {
-        opacity: 1,
-      },
-      tooltip: {
-        y: {
-          formatter: function (val) {
-            return '$ ' + val + ' million';
-          },
+    },
+    dataLabels: {
+      enabled: false,
+      fontSize: '14px',
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ['transparent'],
+    },
+    xaxis: {
+      categories: [jsonObject.title],
+      labels: {
+        style: {
+          fontSize: '10px',
         },
       },
-    };
-    let chart = new ApexCharts(
-      document.querySelector('.js-grafiek'),
-      Bar1
-    );
-    chart.render();
+    },
+    yaxis: {
+      title: {
+        text: '$ (million)',
+      },
+      labels: {
+        style: {
+          fontSize: '10px',
+        },
+      },
+    },
+    fill: {
+      opacity: 1,
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return '$ ' + val + ' million';
+        },
+      },
+    },
+    responsive: [
+      {
+        breakpoint: 1600,
+        options: {
+          chart: { height: '300px', width: '600px' },
+        },
+      },
+      {
+        breakpoint: 1200,
+        options: {
+          chart: { height: '200px', width: '400px' },
+        },
+      },
+      {
+        breakpoint: 600,
+        options: {
+          chart: { height: '200px', width: '300px' },
+        },
+      },
+      {
+        breakpoint: 500,
+        options: {
+          chart: { height: '200px', width: '200px' },
+        },
+      },
+    ],
+  };
+  let chart = new ApexCharts(document.querySelector('.js-grafiek'), Bar1);
+  chart.render();
 };
 
 const getMovies = function () {
@@ -100,8 +135,8 @@ const listenToMovies = function () {
   for (const btn of buttons) {
     btn.addEventListener('click', function () {
       const id = btn.getAttribute('movie_id');
-      console.log(id)
-      getMovie(id)
+      console.log(id);
+      getMovie(id);
     });
   }
 };
