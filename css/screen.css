@@ -809,8 +809,3 @@ input::placeholder {
         page-break-after: avoid;
     }
 }
-
-.is-night {
-    --color-front: black;
-    --color-back: #ad281e;
-}
