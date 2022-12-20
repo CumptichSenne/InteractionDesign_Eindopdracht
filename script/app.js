@@ -31,7 +31,6 @@ const showMovie = function (jsonObject) {
 };
 
 const ShowGrafiek = function (jsonObject) {
-  console.log(jsonObject.box_office);
   let Bar1 = {
     series: [
       {
@@ -62,6 +61,10 @@ const ShowGrafiek = function (jsonObject) {
       show: true,
       width: 2,
       colors: ['transparent'],
+    },
+    title: {
+      text: 'Amount of money made (in $)',
+      align: 'center',
     },
     xaxis: {
       categories: [jsonObject.title],
@@ -119,7 +122,14 @@ const ShowGrafiek = function (jsonObject) {
     ],
   };
   let chart = new ApexCharts(document.querySelector('.js-grafiek'), Bar1);
-  chart.render();
+  if(screen.width > 500)
+  {
+    chart.render();
+  }
+  if(screen.width < 500)
+  {
+    chart.destroy();
+  }
 };
 
 const getMovies = function () {
@@ -135,7 +145,6 @@ const listenToMovies = function () {
   for (const btn of buttons) {
     btn.addEventListener('click', function () {
       const id = btn.getAttribute('movie_id');
-      console.log(id);
       getMovie(id);
     });
   }
