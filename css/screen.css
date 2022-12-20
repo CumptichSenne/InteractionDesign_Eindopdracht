@@ -333,11 +333,12 @@ input::placeholder {
 
 .grid-item {
     background-color: white;
-    padding: 10px;
+    padding: max(10px, 10px);
     font-size: 24px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.11);
+    max-width: 350px;
 }
 
 .overlay {
@@ -418,6 +419,10 @@ input::placeholder {
         grid-template-columns: auto auto auto;
     }
 
+    .grid-item{
+        max-width: 320px;
+    }
+
     .c-logo{
         font-size: 24px;
     }
@@ -439,6 +444,10 @@ input::placeholder {
 @media(max-width: 900px) {
     .grid-container {
         grid-template-columns: auto auto ;
+    }
+
+    .grid-item {
+        max-width: 290px;
     }
 
     .c-logo {
@@ -469,6 +478,9 @@ input::placeholder {
 
 @media(max-width: 600px) {
 
+    .grid-item {
+            max-width: 210px;
+        }
     .c-title{
         font-size: 16px;
     }
@@ -489,6 +501,8 @@ input::placeholder {
 @media(max-width: 450px) {
     .grid-container {
             grid-template-columns: auto;
+            align-items: center;
+            justify-items: center;
         }
 }
 
