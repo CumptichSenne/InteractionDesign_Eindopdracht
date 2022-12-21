@@ -91,30 +91,30 @@ h3 {
 }
 
 h1 {
-    font-size: 36px;
-    line-height: 48px;
-    margin: 0 0 24px;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    margin: 0 0 1.5rem;
 }
 
 h2 {
-    font-size: 32px;
-    line-height: 40px;
-    margin: 0 0 24px;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 0 0 1.5rem;
 }
 
 h3 {
-    font-size: 26px;
-    line-height: 32px;
-    margin: 0 0 24px;
+    font-size: 1.625rem;
+    line-height: 2rem;
+    margin: 0 0 1.5rem;
 }
 
 h4,
 h5,
 h6 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 24px;
-    margin: 0 0 24px;
+    line-height: 1.5rem;
+    margin: 0 0 1.5rem;
 }
 
 p,
@@ -124,12 +124,12 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 24px;
+    margin: 0 0 1.5rem;
 }
 
 ul,
 ol {
-    padding-left: 24px;
+    padding-left: 1.5rem;
 }
 
 li ul,
@@ -139,9 +139,9 @@ li ol {
 
 blockquote {
     font-style: normal;
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 24px;
+    font-size: 1.4375rem;
+    line-height: 2rem;
+    margin: 0 0 1.5rem;
 }
 
 blockquote * {
@@ -151,23 +151,23 @@ blockquote * {
 
 figcaption {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    margin-top: 8px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-top: 0.5rem;
 }
 
 hr {
     border: 0;
-    height: 1px;
+    height: 0.0625rem;
     background: LightGrey;
-    margin: 0 0 24px;
+    margin: 0 0 1.5rem;
 }
 
 a {
     color: black;
     outline-color: black;
     outline-width: medium;
-    outline-offset: 2px;
+    outline-offset: 0.125rem;
     text-decoration: none;
 }
 
@@ -237,10 +237,10 @@ input::placeholder {
 
 .o-hide-accessible {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 0.0625rem;
+    height: 0.0625rem;
     padding: 0;
-    margin: -1px;
+    margin: -0.0625rem;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
@@ -268,12 +268,12 @@ input::placeholder {
 */
 
 .c-logo {
-    font-size: 32px;
-    line-height: 16px;
+    font-size: 2rem;
+    line-height: 1rem;
     font-weight: 400;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
     margin-bottom: auto;
     color: #fafafa;
 }
@@ -286,8 +286,8 @@ input::placeholder {
 
 .c-svg {
     fill: #fafafa;
-    height: 46px;
-    width: 46px;
+    height: 2.875rem;
+    width: 2.875rem;
 }
 
 /*
@@ -299,46 +299,46 @@ input::placeholder {
 .c-app{
 
     min-height: 100vh;
-    padding: 2rem 3rem 2rem 2rem;
+    padding: 32px 48px 32px 32px;
 }
 
 .c-app__summary{
-    font-size: 28px;
-    line-height: 40px;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
 }
 
 .c-movie-title{
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .c-title{
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .c-info{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .c-image{
-    max-width: 300px;
+    max-width: 18.75rem;
 }
 
 .grid-container {
     display: grid;
-    gap: 50px;
+    gap: 3.125rem;
     grid-template-columns: auto auto auto auto;
-    padding: 10px;
+    padding: 0.625rem;
     width: 95vw;
 }
 
 .grid-item {
     background-color: white;
-    padding: max(10px, 10px);
-    font-size: 24px;
+    padding: max(0.625rem, 0.625rem);
+    font-size: 1.5rem;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.11);
-    max-width: 350px;
+    border-radius: 0.625rem;
+    box-shadow: 0.625rem 0.3125rem 0.3125rem rgba(0, 0, 0, 0.11);
+    max-width: 21.875rem;
 }
 
 .overlay {
@@ -359,10 +359,10 @@ input::placeholder {
 }
 
 .popup {
-    margin: 70px auto;
-    padding: 20px;
+    margin: 4.375rem auto;
+    padding: 1.25rem;
     background: #fff;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     width: 70%;
     position: relative;
     transition: all 1s ease-in-out;
@@ -376,10 +376,10 @@ input::placeholder {
 
 .popup .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 1.25rem;
+    right: 1.875rem;
     transition: all 200ms;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: bold;
     text-decoration: none;
     color: #333;
@@ -395,11 +395,11 @@ input::placeholder {
 }
 
 .c-loader {
-    border: 16px solid #f3f3f3;
+    border: 1rem solid #f3f3f3;
     border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
+    border-top: 1rem solid #3498db;
+    width: 7.5rem;
+    height: 7.5rem;
     animation: spin 2s linear infinite;
     position: fixed;
 }
@@ -414,27 +414,27 @@ input::placeholder {
     }
 }
 
-@media(max-width: 1500px) {
+@media(max-width: 93.75rem) {
 
     .grid-item {
-        max-width: 300px;
+        max-width: 18.75rem;
     }
 
     .c-logo {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .c-svg {
-        width: 38px;
-        height: 38px;
+        width: 2.375rem;
+        height: 2.375rem;
     }
 
     .c-image {
-        max-width: 225px;
+        max-width: 14.0625rem;
     }
 
     .c-title {
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .popup {
@@ -442,26 +442,26 @@ input::placeholder {
     }
 }
 
-@media(max-width: 1200px){
+@media(max-width: 75rem){
     .grid-container{
         grid-template-columns: auto auto auto;
     }
 
     .grid-item{
-        max-width: 320px;
+        max-width: 20rem;
     }
 
     .c-logo{
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .c-svg{
-        width: 38px;
-        height: 38px;
+        width: 2.375rem;
+        height: 2.375rem;
     }
 
     .c-title{
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .popup{
@@ -469,38 +469,38 @@ input::placeholder {
     }
 }
 
-@media(max-width: 900px) {
+@media(max-width: 56.25rem) {
     .grid-container {
         grid-template-columns: auto auto ;
     }
 
     .grid-item {
-        max-width: 290px;
+        max-width: 18.125rem;
     }
 
     .c-logo {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .c-svg {
-        width: 26px;
-        height: 26px;
+        width: 1.625rem;
+        height: 1.625rem;
     }
 
     .c-title{
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .c-info{
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .c-image{
-        max-width: 250px;
+        max-width: 15.625rem;
     }
 
     .c-movie-title{
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .popup {
@@ -508,26 +508,26 @@ input::placeholder {
     }
 }
 
-@media(max-width: 700px) {
+@media(max-width: 43.75rem) {
 
     .grid-item {
-        max-width: 250px;
+        max-width: 15.625rem;
     }
 
     .c-title {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .c-info {
-        font-size: 10px;
+        font-size: 0.625rem;
     }
 
     .c-image {
-        max-width: 200px;
+        max-width: 12.5rem;
     }
 
     .c-movie-title {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .popup {
@@ -535,25 +535,25 @@ input::placeholder {
     }
 }
 
-@media(max-width: 600px) {
+@media(max-width: 37.5rem) {
 
     .grid-item {
-            max-width: 210px;
+            max-width: 13.125rem;
     }
     .c-title{
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .c-info {
-        font-size: 10px;
+        font-size: 0.625rem;
     }
 
     .c-image{
-        max-width: 150px;
+        max-width: 9.375rem;
     }
 
     .c-movie-title{
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .popup {
@@ -561,7 +561,7 @@ input::placeholder {
     }
 }
 
-@media(max-width: 450px) {
+@media(max-width: 28.125rem) {
     .grid-container {
             grid-template-columns: auto;
             align-items: center;
@@ -569,7 +569,7 @@ input::placeholder {
     }
     
     .grid-item {
-        max-width: 170px;
+        max-width: 10.625rem;
     }
 
     .popup{
@@ -630,7 +630,7 @@ input::placeholder {
     flex-basis: calc(100% / 6 * 5) !important;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 36rem) {
     .u-1-of-2-bp1 {
         flex-basis: calc(100% / 2) !important;
     }
@@ -676,7 +676,7 @@ input::placeholder {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .u-1-of-2-bp2 {
         flex-basis: calc(100% / 2) !important;
     }
@@ -722,7 +722,7 @@ input::placeholder {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 62rem) {
     .u-1-of-2-bp3 {
         flex-basis: calc(100% / 2) !important;
     }
@@ -768,7 +768,7 @@ input::placeholder {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
     .u-1-of-2-bp4 {
         flex-basis: calc(100% / 2) !important;
     }
@@ -869,7 +869,7 @@ input::placeholder {
     }
     pre,
     blockquote {
-        border: 1px solid #999;
+        border: 0.0625rem solid #999;
         page-break-inside: avoid;
     }
     /*
