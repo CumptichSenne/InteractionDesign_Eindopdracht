@@ -8,12 +8,21 @@
 
 :root {
     /* colors */
-    --color-front: black;
-    --color-back: #ad281e;
+    --global-color-background: #ad281e;
+    --global-color-black: black;
+    --global-color-white: white;
 
     /* opacity */
 
     /* transitions */
+
+    /* font-size */
+    --global-font-size-grid-item: 1.5rem;
+    --global-font-size-1rem: 1rem;
+    --global-font-size-info: 0.625rem;
+
+    /* margin */
+    --global-margin: 0 0 1.5rem;
 }
 
 /*------------------------------------*\
@@ -27,15 +36,15 @@
 */
 
 html {
-    font-size: 1rem;
+    font-size: var(--global-font-size-1rem);
     line-height: 1.5;
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--color-back);
-    color: var(--color-front);
+    background-color: var(--global-color-background);
+    color: var(--global-color-black);
 }
 
 *,
@@ -52,14 +61,14 @@ html {
 */
 
 ::-moz-selection {
-    background: var(--color-front);
-    color: white;
+    background: var(--global-color-black);
+    color: var(--global-color-white);
     text-shadow: none;
 }
 
 ::selection {
-    background: var(--color-front);
-    color: white;
+    background: var(--global-color-black);
+    color: var(--global-color-white);
     text-shadow: none;
 }
 
@@ -93,28 +102,28 @@ h3 {
 h1 {
     font-size: 2.25rem;
     line-height: 3rem;
-    margin: 0 0 1.5rem;
+    margin: var(--global-margin);
 }
 
 h2 {
     font-size: 2rem;
     line-height: 2.5rem;
-    margin: 0 0 1.5rem;
+    margin: var(--global-margin);
 }
 
 h3 {
     font-size: 1.625rem;
     line-height: 2rem;
-    margin: 0 0 1.5rem;
+    margin: var(--global-margin);
 }
 
 h4,
 h5,
 h6 {
-    font-size: 1rem;
+    font-size: var(--global-font-size-1rem);
     font-weight: 600;
     line-height: 1.5rem;
-    margin: 0 0 1.5rem;
+    margin: var(--global-margin);
 }
 
 p,
@@ -124,7 +133,7 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 1.5rem;
+    margin: var(--global-margin);
 }
 
 ul,
@@ -141,7 +150,7 @@ blockquote {
     font-style: normal;
     font-size: 1.4375rem;
     line-height: 2rem;
-    margin: 0 0 1.5rem;
+    margin: var(--global-margin);
 }
 
 blockquote * {
@@ -160,12 +169,12 @@ hr {
     border: 0;
     height: 0.0625rem;
     background: LightGrey;
-    margin: 0 0 1.5rem;
+    margin: var(--global-margin);
 }
 
 a {
-    color: black;
-    outline-color: black;
+    color: var(--global-color-black);
+    outline-color: var(--global-color-black);
     outline-width: medium;
     outline-offset: 0.125rem;
     text-decoration: none;
@@ -173,13 +182,13 @@ a {
 
 a:visited,
 a:active {
-    color: black;
+    color: var(--global-color-black);
     text-decoration: none;
 }
 
 a:hover,
 a:focus {
-    color: red;
+    color: var(--global-color-background);
     text-decoration: none;
 }
 
@@ -308,7 +317,7 @@ input::placeholder {
 }
 
 .c-movie-title{
-    font-size: 1.5rem;
+    font-size: var(--global-font-size-grid-item);
 }
 
 .c-title{
@@ -332,9 +341,9 @@ input::placeholder {
 }
 
 .grid-item {
-    background-color: white;
+    background-color: var(--global-color-white);
     padding: max(0.625rem, 0.625rem);
-    font-size: 1.5rem;
+    font-size: var(--global-font-size-grid-item);
     text-align: center;
     border-radius: 0.625rem;
     box-shadow: 0.625rem 0.3125rem 0.3125rem rgba(0, 0, 0, 0.11);
@@ -421,7 +430,7 @@ input::placeholder {
     }
 
     .c-logo {
-        font-size: 1.5rem;
+        font-size: var(--global-font-size-grid-item);
     }
 
     .c-svg {
@@ -452,7 +461,7 @@ input::placeholder {
     }
 
     .c-logo{
-        font-size: 1.5rem;
+        font-size: var(--global-font-size-grid-item);
     }
 
     .c-svg{
@@ -488,7 +497,7 @@ input::placeholder {
     }
 
     .c-title{
-        font-size: 1.5rem;
+        font-size: var(--global-font-size-grid-item);
     }
 
     .c-info{
@@ -500,7 +509,7 @@ input::placeholder {
     }
 
     .c-movie-title{
-        font-size: 1.5rem;
+        font-size: var(--global-font-size-grid-item);
     }
 
     .popup {
@@ -515,11 +524,11 @@ input::placeholder {
     }
 
     .c-title {
-        font-size: 1rem;
+        font-size: var(--global-font-size-1rem);
     }
 
     .c-info {
-        font-size: 0.625rem;
+        font-size: var(--global-font-size-info);
     }
 
     .c-image {
@@ -527,7 +536,7 @@ input::placeholder {
     }
 
     .c-movie-title {
-        font-size: 1rem;
+        font-size: var(--global-font-size-1rem);
     }
 
     .popup {
@@ -541,11 +550,11 @@ input::placeholder {
             max-width: 13.125rem;
     }
     .c-title{
-        font-size: 1rem;
+        font-size: var(--global-font-size-1rem);
     }
 
     .c-info {
-        font-size: 0.625rem;
+        font-size: var(--global-font-size-info);
     }
 
     .c-image{
@@ -553,7 +562,7 @@ input::placeholder {
     }
 
     .c-movie-title{
-        font-size: 1rem;
+        font-size: var(--global-font-size-1rem);
     }
 
     .popup {
